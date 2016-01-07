@@ -1,0 +1,24 @@
+{
+    "type": "firstDiscovery.server.environment.config",
+    "options": {
+        "gradeNames": ["gpii.firstDiscovery.server.configurator"],
+        "port": "{gpii.resolvers.env}.vars.FIRST_DISCOVERY_SERVER_TCP_PORT",
+        "preferencesConfig": {
+            "securityServer": {
+                "port": "{gpii.resolvers.env}.vars.GPII_OAUTH2_TCP_PORT",
+                "hostname": "{gpii.resolvers.env}.vars.GPII_OAUTH2_HOST_NAME",
+                "paths": {
+                    "token": "{gpii.resolvers.env}.vars.GPII_OAUTH2_ACCESS_TOKEN_PATH",
+                    "preferences": "{gpii.resolvers.env}.vars.GPII_OAUTH2_ADD_PREFERENCES_PATH"
+                }
+            },
+            "authentication": {
+                "grant_type": "{gpii.resolvers.env}.vars.GPII_OAUTH2_AUTH_GRANT_TYPE",
+                "scope": "{gpii.resolvers.env}.vars.GPII_OAUTH2_AUTH_SCOPE",
+                "client_id": "{gpii.resolvers.env}.vars.GPII_OAUTH2_AUTH_CLIENT_ID",
+                "client_secret": "{gpii.resolvers.env}.vars.GPII_OAUTH2_AUTH_CLIENT_SECRET"
+            }
+        }
+    },
+    "require": ["../js/firstDiscoveryServer.js"]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "firstDiscovery.server.oauth2.config",
+    "options": {
+        "gradeNames": ["gpii.firstDiscovery.server.configurator"],
+        "preferencesConfig": {
+            "securityServer": {
+                "paths": {
+                    "token": "/access_token",
+                    "preferences": "/add-preferences?view=%view"
+                }
+            },
+            "authentication": {
+                "grant_type": "client_credentials",
+                "scope": "add_preferences"
+            }
+        }
+    },
+    "mergeConfigs": ["environment.json"]
+}
